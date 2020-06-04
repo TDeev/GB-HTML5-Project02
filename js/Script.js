@@ -1,3 +1,4 @@
-let t1 = document.querySelector('.fontS_1');
-let t2 = document.querySelector('.fontS_2');
-
+let scroll = document.querySelector('.header-nav');
+// window.onscroll = function () {
+//   scroll.classList.add('scroll');
+// }

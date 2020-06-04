@@ -24,6 +24,18 @@ body {
           box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
 }
 
+.txt-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 770px;
+  padding: 75px 0 35px 0;
+}
+
 .txt-head {
   display: block;
   font-size: 52px;
@@ -38,9 +50,10 @@ body {
 .txt-paragraph {
   display: block;
   font-size: 16px;
+  margin: 16px 0 0 0;
 }
 
-.txt-btn {
+.btn {
   display: block;
   text-transform: uppercase;
   padding: 21px 37px 18px 37px;
@@ -55,12 +68,12 @@ body {
           box-shadow: 0 3px 0 0 #736300;
 }
 
-.txt-btn:hover {
+.btn:hover {
   color: #736300;
   background: #a3a2a0;
 }
 
-.txt-btn:active {
+.btn:active {
   -webkit-transform: translate(0, 3px);
           transform: translate(0, 3px);
   -webkit-box-shadow: none;
@@ -80,7 +93,7 @@ body {
 }
 
 .header .header-nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -348,6 +361,8 @@ body {
   /*----Возможности----*/
   /*----Идеи----*/
   /*----Реклама----*/
+  /*----Проекты----*/
+  /*----Презентация----*/
 }
 
 .main .capability {
@@ -438,88 +453,82 @@ body {
 }
 
 .main .ideas {
-  height: 700px;
-  background: #fbfaf8;
-}
-
-.main .ideas .wrap {
-  position: relative;
-  height: 100%;
-  max-width: 1220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fbfaf8;
+}
+
+.main .ideas .txt-wrp .txt-topic {
+  text-align: center;
+  color: #555555;
+}
+
+.main .ideas .txt-wrp .txt-paragraph {
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.main .ideas .ideas-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-
-.main .ideas .wrap .ideas-item {
-  width: 770px;
+  max-width: 1230px;
+  width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
 
-.main .ideas .wrap .ideas-item .txt-topic {
-  text-align: center;
-  color: #555555;
-  margin: 0 0 22px 0;
-}
-
-.main .ideas .wrap .ideas-item .txt-paragraph {
-  text-align: center;
-  color: #8c8c8c;
-  margin: 0 0 41px 0;
-}
-
-.main .ideas .wrap .ideas-item:nth-child(1) {
+.main .ideas .ideas-item .ideas-item-img:nth-child(1) {
   position: absolute;
   left: 0px;
-}
-
-.main .ideas .wrap .ideas-item:nth-child(1) .ideas-item-img {
   height: 400px;
+  width: 770px;
   background-image: url(../img/browser-left.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.main .ideas .wrap .ideas-item:nth-child(1):hover {
+.main .ideas .ideas-item .ideas-item-img:nth-child(1):hover {
   z-index: 2;
 }
 
-.main .ideas .wrap .ideas-item:nth-child(2) {
+.main .ideas .ideas-item .ideas-item-img:nth-child(2) {
+  position: relative;
   z-index: 1;
-}
-
-.main .ideas .wrap .ideas-item:nth-child(2) .ideas-item-img {
   height: 482px;
+  width: 770px;
   background-image: url(../img/browser-center.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.main .ideas .wrap .ideas-item:nth-child(3) {
+.main .ideas .ideas-item .ideas-item-img:nth-child(3) {
   position: absolute;
   right: 0px;
-}
-
-.main .ideas .wrap .ideas-item:nth-child(3) .ideas-item-img {
   height: 400px;
+  width: 770px;
   background-image: url(../img/browser-right.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.main .ideas .wrap .ideas-item:nth-child(3):hover {
+.main .ideas .ideas-item .ideas-item-img:nth-child(3):hover {
   z-index: 2;
 }
 
@@ -552,4 +561,252 @@ body {
 
 .main .advertising .wrap .advertising-txt .advertising-txt-paragraph {
   color: #615855;
+  margin: 16px 0 0 0;
+}
+
+.main .projects .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .projects .txt-wrp .txt-topic {
+  text-align: center;
+  color: #555555;
+}
+
+.main .projects .txt-wrp .txt-paragraph {
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.main .projects .projects-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .projects .projects-controls .projects-controls-item {
+  display: block;
+  margin: 0 10px 0 0;
+  text-transform: capitalize;
+  font-size: 14px;
+  padding: 5px 15px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #8c8c8c;
+}
+
+.main .projects .projects-controls .projects-controls-item:hover {
+  background: #998675;
+  color: #ffffff;
+  border: 1px solid #998675;
+}
+
+.main .projects .projects-controls .projects-controls-item:nth-child(5) {
+  margin: 0;
+}
+
+.main .projects .projects-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  max-width: 1170px;
+  height: 704px;
+  margin: 40px 0;
+}
+
+.main .projects .projects-items .projects-items-item {
+  position: relative;
+  width: 370px;
+  height: 337px;
+  background: #fbfaf8;
+}
+
+.main .projects .projects-items .projects-items-item .projects-item-img {
+  display: block;
+}
+
+.main .projects .projects-items .projects-items-item .projects-items-svg-url {
+  position: absolute;
+  top: 105px;
+  display: none;
+}
+
+.main .projects .projects-items .projects-items-item .projects-items-svg-url:nth-child(2) {
+  left: 150px;
+}
+
+.main .projects .projects-items .projects-items-item .projects-items-svg-url:nth-child(3) {
+  right: 150px;
+}
+
+.main .projects .projects-items .projects-items-item .projects-items-svg-url .projects-item-svg-link,
+.main .projects .projects-items .projects-items-item .projects-items-svg-url .projects-item-svg-lupa {
+  fill: white;
+}
+
+.main .projects .projects-items .projects-items-item .project-item-wrap-txt {
+  position: relative;
+  padding: 25px 30px;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main .projects .projects-items .projects-items-item .project-item-wrap-txt .project-item-title {
+  color: #c7b299;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+.main .projects .projects-items .projects-items-item .project-item-wrap-txt .project-item-txt {
+  color: #d1d1d1;
+  font-size: 14px;
+  margin: 0;
+}
+
+.main .projects .projects-items .projects-items-item .project-item-wrap-txt::before {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid #fbfaf8;
+}
+
+.main .projects .projects-items .projects-items-item:hover {
+  background-color: #362f2d;
+}
+
+.main .projects .projects-items .projects-items-item:hover .project-item-wrap-txt::before {
+  border-bottom: 10px solid #362f2d;
+}
+
+.main .projects .projects-items .projects-items-item:hover .projects-items-svg-url {
+  display: block;
+}
+
+.main .projects .projects-items .projects-items-item:hover .projects-item-img {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.main .projects .projects-items .projects-items-item:hover .projects-item-img {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.main .projects .projects-items .projects-items-item:hover .project-item-title {
+  color: #ffffff;
+}
+
+.main .projects .projects-items .projects-items-item:hover .project-item-txt {
+  color: #c7b299;
+}
+
+.main .projects .projects-items .projects-items-item:hover .projects-items-svg-url:hover .projects-item-svg-link,
+.main .projects .projects-items .projects-items-item:hover .projects-items-svg-url:hover .projects-item-svg-lupa {
+  fill: #998675;
+}
+
+.main .projects .btn {
+  margin: 0 0 80px 0;
+}
+
+.main .presentation {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 705px;
+  width: 100%;
+}
+
+.main .presentation .presentation-video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .presentation .presentation-content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 30%;
+  margin: 0 auto;
+}
+
+.main .presentation .presentation-content .presentation-content-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: black;
+  opacity: 0.2;
+}
+
+.main .presentation .presentation-content .presentation-content-btn .presentation-content-svg {
+  fill: #ffffff;
+}
+
+.main .presentation .presentation-content .txt-wrp {
+  padding-top: 44px;
+}
+
+.main .presentation .presentation-content .txt-wrp .txt-topic {
+  text-transform: capitalize;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main .presentation .presentation-content .txt-wrp .txt-paragraph {
+  color: #ffffff;
+  text-align: center;
+}
+
+.main .presentation .presentation-content .projects-content-time {
+  display: block;
+  color: #c7b299;
+  font-size: 14px;
 }

@@ -35,23 +35,28 @@ body {
   box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
 }
 
+.txt-wrp {
+  display: flex;
+  flex-direction: column;
+  max-width: 770px;
+  padding: 75px 0 35px 0;
+}
 .txt-head {
   display: block;
   font-size: 52px;
   font-weight: bold;
 }
-
 .txt-topic {
   display: block;
   font-size: 36px;
 }
-
 .txt-paragraph {
   display: block;
   font-size: 16px;
+  margin: 16px 0 0 0;
 }
 
-.txt-btn {
+.btn {
   display: block;
   text-transform: uppercase;
   padding: 21px 37px 18px 37px;
@@ -85,7 +90,7 @@ body {
 
   /*----навигация----*/
   .header-nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -385,68 +390,65 @@ body {
 
   /*----Идеи----*/
   .ideas {
-    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 700px;
     background: #fbfaf8;
 
-    .wrap {
+    .txt-wrp {
+      .txt-topic {
+        text-align: center;
+        color: #555555;
+      }
+      .txt-paragraph {
+        text-align: center;
+        color: #8c8c8c;
+      }
+    }
+
+    .ideas-item {
       position: relative;
-      height: 100%;
-      max-width: 1220px;
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: flex-end;
+      max-width: 1230px;
+      width: 100%;
+      flex: 0 0 auto;
 
-      .ideas-item {
-        width: 770px;
-        flex: 0 0 auto;
-
-        .txt-topic {
-          text-align: center;
-          color: #555555;
-          margin: 0 0 22px 0;
-        }
-        .txt-paragraph {
-          text-align: center;
-          color: #8c8c8c;
-          margin: 0 0 41px 0;
-        }
-
+      .ideas-item-img {
         &:nth-child(1) {
           position: absolute;
           left: 0px;
-
-          .ideas-item-img {
-            height: 400px;
-            background-image: url(../img/browser-left.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+          height: 400px;
+          width: 770px;
+          background-image: url(../img/browser-left.png);
+          background-size: cover;
+          background-repeat: no-repeat;
 
           &:hover {
             z-index: 2;
           }
         }
-        &:nth-child(2) {
-          z-index: 1;
 
-          .ideas-item-img {
-            height: 482px;
-            background-image: url(../img/browser-center.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+        &:nth-child(2) {
+          position: relative;
+          z-index: 1;
+          height: 482px;
+          width: 770px;
+          background-image: url(../img/browser-center.png);
+          background-size: cover;
+          background-repeat: no-repeat;
         }
+
         &:nth-child(3) {
           position: absolute;
           right: 0px;
-
-          .ideas-item-img {
-            height: 400px;
-            background-image: url(../img/browser-right.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
+          height: 400px;
+          width: 770px;
+          background-image: url(../img/browser-right.png);
+          background-size: cover;
+          background-repeat: no-repeat;
 
           &:hover {
             z-index: 2;
@@ -476,10 +478,215 @@ body {
         }
         .advertising-txt-paragraph {
           color: #615855;
+          margin: 16px 0 0 0;
+        }
+      }
+    }
+  }
+
+  /*----Проекты----*/
+  .projects {
+    // height: 1162px;
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .txt-wrp {
+      .txt-topic {
+        text-align: center;
+        color: #555555;
+      }
+      .txt-paragraph {
+        text-align: center;
+        color: #8c8c8c;
+      }
+    }
+    .projects-controls {
+      display: flex;
+
+      .projects-controls-item {
+        display: block;
+        margin: 0 10px 0 0;
+        text-transform: capitalize;
+        font-size: 14px;
+        padding: 5px 15px;
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #8c8c8c;
+
+        &:hover {
+          background: #998675;
+          color: #ffffff;
+          border: 1px solid #998675;
+        }
+        &:nth-child(5) {
+          margin: 0;
+        }
+      }
+    }
+    .projects-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      max-width: 1170px;
+      //!тут надо подумать как переделать фикс высоту
+      height: 704px;
+      margin: 40px 0;
+
+      .projects-items-item {
+        position: relative;
+        width: 370px;
+        height: 337px;
+        background: #fbfaf8;
+        // margin: 0 0 30px 0;
+
+        .projects-item-img {
+          display: block;
+        }
+
+        .projects-items-svg-url {
+          position: absolute;
+          top: 105px;
+          display: none;
+
+          &:nth-child(2) {
+            left: 150px;
+          }
+          &:nth-child(3) {
+            right: 150px;
+          }
+          .projects-item-svg-link,
+          .projects-item-svg-lupa {
+            fill: white;
+          }
+        }
+
+        .project-item-wrap-txt {
+          position: relative;
+          padding: 25px 30px;
+          height: 100px;
+          box-sizing: border-box;
+
+          .project-item-title {
+            color: #c7b299;
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            display: block;
+          }
+          .project-item-txt {
+            color: #d1d1d1;
+            font-size: 14px;
+            margin: 0;
+          }
+
+          &::before {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #fbfaf8;
+          }
+        }
+
+        &:hover {
+          background-color: #362f2d;
+
+          .project-item-wrap-txt::before {
+            border-bottom: 10px solid #362f2d;
+          }
+          .projects-items-svg-url {
+            display: block;
+          }
+          .projects-item-img {
+            filter: brightness(30%);
+          }
+          .projects-item-img {
+            filter: brightness(30%);
+          }
+          .project-item-title {
+            color: #ffffff;
+          }
+          .project-item-txt {
+            color: #c7b299;
+          }
+          .projects-items-svg-url:hover {
+            .projects-item-svg-link,
+            .projects-item-svg-lupa {
+              fill: #998675;
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      margin: 0 0 80px 0;
+    }
+  }
+
+  /*----Презентация----*/
+  .presentation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 705px;
+    width: 100%;
+
+    .presentation-video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .presentation-content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 30%;
+      margin: 0 auto;
+
+      .presentation-content-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: black;
+        opacity: 0.2;
+
+        .presentation-content-svg {
+          fill: #ffffff;
+          // position: relative;
+          // z-index: 10;
         }
       }
 
-      .txt-btn {
+      .txt-wrp {
+        padding-top: 44px;
+        .txt-topic {
+          text-transform: capitalize;
+          text-align: center;
+          color: #ffffff;
+        }
+        .txt-paragraph {
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+      .projects-content-time {
+        display: block;
+        color: #c7b299;
+        font-size: 14px;
       }
     }
   }

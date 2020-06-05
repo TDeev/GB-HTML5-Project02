@@ -527,7 +527,7 @@ body {
       justify-content: space-between;
       align-content: space-between;
       max-width: 1170px;
-      //!тут надо подумать как переделать фикс высоту
+      //!надо почитать.
       height: 704px;
       margin: 40px 0;
 
@@ -536,6 +536,7 @@ body {
         width: 370px;
         height: 337px;
         background: #fbfaf8;
+        //!лишнее
         // margin: 0 0 30px 0;
 
         .projects-item-img {

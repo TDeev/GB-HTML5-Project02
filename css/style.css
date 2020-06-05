@@ -17,13 +17,6 @@ body {
   margin: 0 auto;
 }
 
-.scroll {
-  background: #fff;
-  color: #333;
-  -webkit-box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
-          box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
-}
-
 .txt-wrp {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -782,12 +775,15 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: black;
-  opacity: 0.2;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .main .presentation .presentation-content .presentation-content-btn .presentation-content-svg {
   fill: #ffffff;
+}
+
+.main .presentation .presentation-content .presentation-content-btn:hover .presentation-content-svg {
+  fill: #998675;
 }
 
 .main .presentation .presentation-content .txt-wrp {
@@ -809,4 +805,11 @@ body {
   display: block;
   color: #c7b299;
   font-size: 14px;
+}
+
+.main .scroll {
+  background: #fff;
+  color: #333;
+  -webkit-box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
+          box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
 }

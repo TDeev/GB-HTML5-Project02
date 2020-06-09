@@ -343,7 +343,7 @@ body {
   display: block;
   position: absolute;
   top: 29px;
-  left: -1720px;
+  left: -5000px;
   width: 0;
   height: 0;
   outline: none;
@@ -1459,6 +1459,7 @@ body {
 
 .footer-top-about {
   width: 260px;
+  margin: 0 5px 0 0;
 }
 
 .footer-top-about-logo {
@@ -1539,6 +1540,7 @@ body {
 }
 
 .footer-top-content {
+  margin: 0 5px 0 0;
   width: 265px;
   padding: 28px 0 0 0;
 }
@@ -1610,7 +1612,7 @@ body {
 }
 
 .footer-top-widget {
-  width: 271px;
+  width: 280px;
   padding: 28px 0 0 0;
 }
 
@@ -1630,16 +1632,10 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  width: 270px;
-  height: 206px;
 }
 
 .footer-top-widget-inner-img {
+  margin: 5px;
   height: 98px;
   width: 130px;
   -o-object-fit: cover;

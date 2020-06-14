@@ -111,7 +111,8 @@
 }
 
 body {
-  margin: 0;
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -368,16 +369,16 @@ body {
   fill: #a3a2a0;
 }
 
-.header-nav-search-form-label .header-nav-search-form-svg {
+.header-nav-search-form-label-svg {
   fill: #ffffff;
 }
 
-.header-nav-search-form-label .header-nav-search-form-svg:hover {
+.header-nav-search-form-label-svg:hover {
   cursor: pointer;
   fill: #998675;
 }
 
-.header-nav-search-form-label .header-nav-search-form-svg:active {
+.header-nav-search-form-label-svg:active {
   fill: #a3a2a0;
 }
 

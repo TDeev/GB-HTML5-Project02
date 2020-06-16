@@ -95,7 +95,7 @@ body {
   color: white;
   /*----навигация----*/
   &-nav {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     top: 0;
     left: 0;
@@ -107,7 +107,7 @@ body {
     transition: 0.2s linear;
     .wrap {
       display: flex;
-      // justify-content: space-between;
+
       align-items: center;
       // padding: 40px 0;
     }
@@ -137,6 +137,7 @@ body {
       }
     }
     &-list {
+      transition: 0.2s ease-in-out;
       flex: 3 0 auto;
       display: flex;
       justify-content: flex-end;
@@ -175,6 +176,7 @@ body {
       border: none;
       outline: none;
       cursor: pointer;
+      height: 25px;
       &-svg {
         fill: #ffffff;
         &:hover {
@@ -187,6 +189,7 @@ body {
     }
     &-search-form {
       position: relative;
+      height: 25px;
       // margin: 0 0 0 28px;
       &-input {
         display: block;
@@ -222,6 +225,141 @@ body {
           }
           &:active {
             fill: #a3a2a0;
+          }
+        }
+      }
+    }
+    // кнопки меню
+    &-menu-input {
+      display: none;
+      // меню в активном состоянии
+      &:checked {
+        //навигация
+        ~ .header-nav-list {
+          visibility: visible;
+          background-color: rgba(255, 255, 255, 0.92);
+          .header-nav-list-items-item-url {
+            color: #272727;
+            &:hover {
+              color: #998675;
+            }
+            &:active {
+              color: #a3a2a0;
+            }
+          }
+        }
+        // корзина
+        ~ .header-nav-basket {
+          position: relative;
+          z-index: 1;
+          .header-nav-basket-svg {
+            fill: #272727;
+            &:hover {
+              fill: #998675;
+            }
+            &:active {
+              fill: #a3a2a0;
+            }
+          }
+        }
+        // поиск
+        ~ .header-nav-search-form {
+          position: relative;
+          z-index: 1;
+          .header-nav-search-form-input:focus {
+            color: #272727;
+            border-bottom: 1px solid #272727;
+          }
+          .header-nav-search-form-label {
+            &-svg {
+              fill: #272727;
+              &:hover {
+                fill: #998675;
+              }
+              &:active {
+                fill: #a3a2a0;
+              }
+            }
+          }
+        }
+        // Гамбургер
+        ~ .header-nav-menu-label {
+          .header-nav-menu-label-line {
+            background: transparent;
+            &::before {
+              transform: rotate(45deg) translate(7px, 7px);
+              background: #272727;
+            }
+            &::after {
+              transform: rotate(-45deg) translate(7px, -7px);
+              background: #272727;
+            }
+          }
+          &:hover {
+            .header-nav-menu-label-line {
+              &::before {
+                background: #998675;
+              }
+              &::after {
+                background: #998675;
+              }
+            }
+          }
+          &:active {
+            .header-nav-menu-label-line {
+              &::before {
+                background: #a3a2a0;
+              }
+              &::after {
+                background: #a3a2a0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-menu-label {
+      display: none;
+      padding: 10px 0 10px 10px;
+      cursor: pointer;
+      &-line {
+        display: block;
+        position: relative;
+        background: #ffffff;
+        height: 2px;
+        width: 24px;
+        transition: background 0.2s ease-in-out;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background: currentColor;
+          height: 2px;
+          width: 24px;
+          transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        &::before {
+          top: -10px;
+        }
+        &::after {
+          top: 10px;
+        }
+      }
+      &:hover {
+        .header-nav-menu-label-line {
+          background: #998675;
+          &::before,
+          &::after {
+            background: #998675;
+          }
+        }
+      }
+      &:active {
+        .header-nav-menu-label-line {
+          background: #a3a2a0;
+          &::before,
+          &::after {
+            background: #a3a2a0;
           }
         }
       }
@@ -628,9 +766,6 @@ body {
       }
     }
   }
-  // .btn {
-  //   margin: 0 0 80px 0;
-  // }
 }
 /*----Презентация----*/
 .presentation {
@@ -1268,6 +1403,21 @@ body {
   color: #333;
   box-shadow: 0 5px 7px 0 rgba(24, 33, 47, 0.2);
 }
+.color {
+  color: #272727;
+  fill: #272727;
+  border: #272727;
+}
+
+.bc-color {
+  background: #272727;
+}
+
+.br-color {
+  color: #272727;
+  border-bottom: 1px solid #272727;
+}
+
 .hiden {
   display: none;
 }
